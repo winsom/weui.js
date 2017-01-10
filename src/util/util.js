@@ -36,7 +36,7 @@ objectAssign($.fn, {
      */
     remove: function () {
         this.forEach(($element) => {
-            $element.parentNode.removeChild($element);
+            $element.parentNode && $element.parentNode.removeChild($element);  //avoid duplicate removal
         });
         return this;
     },
